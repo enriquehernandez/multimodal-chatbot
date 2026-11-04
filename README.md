@@ -206,45 +206,6 @@ uv run tom test
 
 *🧪 Estrategia de testing detallada en PRODUCT_BLUEPRINT/03_SECURITY_AND_AUDIT/02_testing_strategy.md.*
 
-## 📁 Estructura del proyecto
-
-.
-├── PRODUCT_BLUEPRINT                   # Documentación técnica completa
-│   ├── 00_FOUNDATION
-│   │   ├── 00_problem_statement.md
-│   │   ├── 01_vision_and_goals.md
-│   │   └── 02_glossary.md
-│   ├── 01_DESIGN_SYSTEM
-│   │   └── 00_architecture.md
-│   ├── 02_COMPONENTS
-│   │   └── 00_multimodal_chain_component.md
-│   ├── 03_SECURITY_AND_AUDIT
-│   │   ├── 00_evaluation_plan.md
-│   │   ├── 00_security_policy.md
-│   │   └── 02_testing_strategy.md
-│   └── README.md
-├── README.md
-├── app
-│   ├── core
-│   │   ├── audio_service.py            # Whisper (STT)
-│   │   ├── config.py                   # Pydantic Settings
-│   │   ├── image_service.py            # Base64 + validación con Pillow
-│   │   └── llm_factory.py              # Registry Pattern (OpenAI, Azure, Groq, Google)
-│   ├── main.py                         # FastAPI endpoints
-│   ├── models
-│   │   └── schemas.py                  # Pydantic request/response
-│   └── services
-│       └── multimodal_engine.py        # Orquestador
-├── data
-│   ├── audio                           # Audios de ejemplo
-│   └── images                          # Imágenes de ejemplo
-├── pyproject.toml
-├── scripts
-│   ├── demo_client.py                  # Cliente de prueba
-│   └── evaluate.py                     # LLM-as-a-Judge
-├── tests
-│   └── conftest.py
-└── uv.lock
 
 ## 🧠 Decisiones de diseño destacadas
 **¿Por qué Registry Pattern en lugar de if/elif?**

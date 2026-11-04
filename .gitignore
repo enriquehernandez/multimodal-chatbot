@@ -1,0 +1,50 @@
+# --- Entornos virtuales ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Variables de entorno (NUNCA subir al repo) ---
+.env
+.env.local
+.env.*.local
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# --- Testing ---
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# --- IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Datos locales (no subir PDFs/imágenes personales) ---
+# Descomenta si no quieres subir tus imágenes de prueba
+# data/*.jpg
+# data/*.png
+
+# --- Logs ---
+*.log
+logs/
+
+pitch*

@@ -1,0 +1,9 @@
+id,tipo,pregunta,respuesta_generada,ground_truth,score
+test_01,imagen,¿Qué problema se ve en la imagen?,"La imagen muestra una **Pantalla Azul de la Muerte** (Blue Screen of Death) en una computadora portátil con sistema operativo Windows.
+
+El problema específico que se ve en la pantalla es:
+
+*   **Mensaje:** ""Your PC ran into a problem and needs to restart"" (Tu PC tuvo un problema y necesita reiniciarse).
+*   **Código de error:** `CRITICAL_PROCESS_DIED`.
+*   **Estado:** El sistema está recopilando información de errores (0% complete) antes de reiniciar automáticamente.",Una pantalla azul de la muerte (BSOD) de Windows.,10.0
+test_02,audio,¿Qué necesita el usuario?,El usuario necesita ayuda urgente porque la pantalla de su laptop se puso azul y no puede hacer nada. Tiene una entrega muy importante en una hora.,Ayuda urgente con su laptop porque tiene una entrega.,10.0

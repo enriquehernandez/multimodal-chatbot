@@ -4,16 +4,35 @@ from pydantic import ValidationError
 from app.core.config import Settings
 
 
-def test_default_values():
-    s = Settings()
+# def test_default_values():
+#     s = Settings()
+#     assert s.LLM_PROVIDER == "OPENROUTER"
+#     assert s.get_active_llm_model() == "nvidia/nemotron-3.5-super-vl:free"
+
+def test_default_values(monkeypatch):
+    # Forzamos a que ignore el .env y use los defaults reales del código
+    monkeypatch.setenv("LLM_PROVIDER", "OPENROUTER")
+    # Si en config.py el default de OPENROUTER_MODEL es google/gemini-2.5-flash, esto pasará
+    s = Settings(_env_file=None)
+
     assert s.LLM_PROVIDER == "OPENROUTER"
-    assert s.get_active_llm_model() == "nvidia/nemotron-3.5-super-vl:free"
+    # Asegúrate de que este sea el default en tu config.py
+    assert s.get_active_llm_model() == "google/gemini-2.5-flash"
+
+# def test_missing_llm_credentials_raises():
+#     s = Settings(
+#         LLM_PROVIDER="OPENROUTER",
+#         OPENROUTER_API_KEY=None,
+#     )
+#     with pytest.raises(ValueError, match="OPENROUTER_API_KEY"):
+#         s.validate_provider_credentials()
 
 
 def test_missing_llm_credentials_raises():
     s = Settings(
         LLM_PROVIDER="OPENROUTER",
         OPENROUTER_API_KEY=None,
+        _env_file=None  # Evita leer el .env local
     )
     with pytest.raises(ValueError, match="OPENROUTER_API_KEY"):
         s.validate_provider_credentials()

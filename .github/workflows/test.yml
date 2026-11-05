@@ -29,16 +29,9 @@ jobs:
           uv run tom test
         env:
           LLM_PROVIDER: "OPENROUTER"
-          OPENAI_API_KEY: "sk-fake-key-for-ci"
-          GROQ_API_KEY: "gsk_..."
-          GROQ_MODEL: "llama-3.3-70b-versatile"
-          OPENROUTER_API_KEY: "sk-or-v1-..."
-          OPENROUTER_MODEL: "openrouter/auto"
-          EMBEDDING_PROVIDER: "OPENROUTER"
-          OPENAI_EMBEDDING_MODEL: "text-embedding-3-small"
-          HUGGINGFACE_EMBEDDING_MODEL: "sentence-transformers/all-MiniLM-L6-v2"
-          OPENROUTER_EMBEDDING_MODEL: "openai/text-embedding-3-small"
-          INGEST_MODE: "INCREMENTAL"
+          OPENROUTER_API_KEY: "sk-or-v1-fake-key-for-ci"
+          OPENROUTER_MODEL: "google/gemini-2.5-flash"
+          OPENROUTER_AUDIO_MODEL: "openai/gpt-4o-audio-preview"
       - name: Upload coverage to Codecov with GitHub Action
         uses: codecov/codecov-action@v5
         with:

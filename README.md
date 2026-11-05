@@ -1,5 +1,7 @@
 # 🤖 Multimodal Chatbot API
 
+[![codecov](https://codecov.io/github/enriquehernandez/multimodal-chatbot/graph/badge.svg?token=07E87I08A7)](https://codecov.io/github/enriquehernandez/multimodal-chatbot)
+
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?style=for-the-badge&logo=fastapi&logoColor=white) ![OpenRouter](https://img.shields.io/badge/OpenRouter-Provider--Agnostic-6467F2?style=for-the-badge) ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen?style=for-the-badge) ![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)
 
 > **API REST multimodal (texto + imagen + audio) impulsada por OpenRouter.**  
